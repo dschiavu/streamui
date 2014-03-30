@@ -1,0 +1,344 @@
+
+html{
+  height: 100%;
+  background: #f6f6f6; 
+}
+
+
+body{
+	width: 100%;
+	min-height: 100%;
+	
+	background: rgb(242,242,242); /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(242,242,242,1) 31%, rgba(238,238,238,1) 99%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(31%,rgba(242,242,242,1)), color-stop(99%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(242,242,242,1) 31%,rgba(238,238,238,1) 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(242,242,242,1) 31%,rgba(238,238,238,1) 99%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(242,242,242,1) 31%,rgba(238,238,238,1) 99%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(242,242,242,1) 31%,rgba(238,238,238,1) 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#eeeeee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+}
+
+.StreamUI{
+	width:100%;
+	height:100%;
+
+}
+
+
+
+.StreamUIContainer{
+	width:100%;
+	height:100%;
+}
+
+.StreamUIMainMenu{
+	border:none;
+	color:white;
+	width:100%;
+	
+	transition-duration: 0.2s;
+	transition-property:opacity;
+	
+	background: #222;
+}
+
+.StreamUIMainMenu a{
+	color:#FFF;
+	padding: 5px;
+	font-size: 1.2em;
+	display: inline-block;
+	border-bottom: 2px solid #222;
+}
+
+.StreamUIMainMenu a:HOVER{
+	border-bottom: 2px solid rgb(73,192,240);
+	text-decoration: none;
+}
+
+
+.StreamUIMainMenuBreadCrumbs{
+	display: inline-block;
+}
+
+.StreamUIMainMenuBreadCrumbs span{
+	color:#FFF;
+}
+
+.StreamUISubMenu{
+	position: absolute;
+	right:0px;
+	top:0px;
+}
+
+ 
+.StreamUIContent{
+ 
+}
+ 
+H1, H2{
+ 	text-shadow: 1px 1px #fff;
+}
+ 
+a{
+	outline: none;
+}
+
+
+/****************************************************
+ * Topology SubMenu
+ ****************************************************/
+ 
+ 
+ .StreamUITopologySubMenu .StreamUITopologySubMenuLabel{
+	color:#FFF;
+	padding: 5px;
+	font-size: 1.2em;
+	display: inline-block;
+	border-bottom: 2px solid #222;
+	position: relative;
+	cursor: pointer;
+}
+
+.StreamUITopologySubMenu .StreamUITopologySubMenuLabel:HOVER{
+	border-bottom: 2px solid rgb(73,192,240);
+	text-decoration: none;
+}
+
+.StreamUITopologySubMenu .StreamUISubmenuPopup{
+	
+	position: absolute;
+	height:0px;
+	overflow: hidden;
+}
+
+.StreamUITopologySubMenu:HOVER .StreamUISubmenuPopup{
+	display: block;
+	top:34px;
+	right:0px;
+	height: 200px;
+	width:200px;
+	background: #222;
+	z-index: 1010;
+	border-radius : 0 0 0px 5px;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	
+
+}
+
+.StreamUISubmenuItem{
+	padding: 10px;
+}
+
+
+/****************************************************
+ * Toplogy
+ ****************************************************/
+
+
+
+.StreamUITopology{
+	height: 100%;
+	width: 100%;
+}
+
+
+.StreamUITopologyCanvas{
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.StreamUITopologySVG{
+	position: absolute;
+	z-index: 1000;
+}
+	
+	
+/****************************************************
+ * Topology List
+ ****************************************************/
+	
+.StreamUIToplogyList{
+	
+}
+
+.StreamUIToplogyListItem{
+	padding:10px;
+}
+
+.StreamUIToplogyListItemContainer{
+	background: #fff;
+	border-radius:3px;
+	padding:20px;
+	padding-bottom:40px;
+	border-bottom: 2px solid #CECECE;
+	width: 100%;
+	box-shadow: 0px 0px 2px #E8E8E8;
+}
+
+.StreamUIToplogyListTopologyWrapper{
+	display:inline-block;
+	
+	width:180px;
+	height:120px;
+	border-radius:3px;
+	color:white;
+	padding: 10px;
+	vertical-align: top;
+
+	
+	background: rgb(242,242,242); /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(242,242,242,1) 31%, rgba(238,238,238,1) 99%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(31%,rgba(242,242,242,1)), color-stop(99%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(242,242,242,1) 31%,rgba(238,238,238,1) 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(242,242,242,1) 31%,rgba(238,238,238,1) 99%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(242,242,242,1) 31%,rgba(238,238,238,1) 99%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(242,242,242,1) 31%,rgba(238,238,238,1) 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#eeeeee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	border:1px solid #dedede;
+	
+}
+
+.StreamUIToplogyListTopologyWrapper .StormUITopologyBox{
+	box-shadow:none;
+}
+
+.StreamUIToplogyListInfoWrapper{
+	display:inline-block;
+	width:180px;
+	height:120px;
+	margin-left: 10px;
+}
+
+.StreamUIToplogyListRow{
+	margin-bottom: 50px;
+}
+
+.StreamUIToplogyListLabel{
+	font-size: 24px;
+	vertical-align: top;
+	color: rgb(73,192,240); /* Old browsers */
+	padding: 0px;
+}
+
+	
+/****************************************************
+ * Box
+ ****************************************************/
+ 
+.StormUITopologyBoxes{
+	position: absolute;
+	z-index: 1001;
+}
+	
+.StormUITopologyBox{
+	position: absolute;
+	z-index: 1003;
+	border-radius:3px;
+	border:none;	
+	transition-duration: 0.5s;
+	transition-property:opacity;
+	color:#333;
+	
+	background:#fff;	
+
+	border: 1px solid #E8E8E8;
+	border-bottom:2px solid #cecece;
+}	
+
+.StormUITopologyBoxDisabled{
+	opacity : 0.15;
+	z-index: 1002;
+}
+
+.StormUITopologyBoxHeader{
+	font-size: 1.1em;
+	padding:10px;
+	overflow: hidden;
+}
+
+.StormUITopologyBoxHeaderInstance{
+	font-style: italic;
+}
+
+.StormUITopologyBoxConfig{
+	position: absolute;
+	top:3px;
+	right:3px;
+	opacity : 0.0;
+	transition-duration: 0.5s;
+	transition-property:opacity;
+	cursor: pointer;
+}
+
+.StormUITopologyBox:Hover .StormUITopologyBoxConfig{
+	opacity : 1.0;
+}
+
+.StormUITopologyBoxFooter{
+	text-align: right;	
+}
+
+.StormUITopologyBoxContent{
+	
+}
+
+
+
+.StreamUIModePreview .StormUITopologyBoxHeader{
+	font-size: 9px;
+	padding:2px;
+}
+
+.StreamUIModePreview .StormUITopologyBox{
+	overflow: hidden;
+}
+
+
+/****************************************************
+ * Dark Theme
+ ****************************************************/
+ 
+ 
+
+/****************************************************
+ * Custom Boxes
+ ****************************************************/
+
+.StormUITopologySpout{
+	
+}
+
+.StormUITopologyBolt{
+}
+
+
+
+
+
+
+
+/****************************************************
+ * Vommond Hcks
+ ****************************************************/
+
+.VommondDashletButtonBar{
+	background: #cecece;
+}
+
+.VommondDashletButton{
+	color: #333;	
+}
+
+.VommondDashletButton:HOVER{
+	color: #222;
+}
+
+.VommondDashletConfig .VommondDashletButtonBar {
+	border: none;
+}
+

@@ -1,0 +1,276 @@
+{
+  "id": "WordCount",
+  "type": "Storm",
+  "components": [
+    {
+      "id": "Twitter",
+      "type": "Spout"
+    },
+    {
+      "id": "Facebook",
+      "type": "Spout"
+    },
+    {
+      "id": "Lucene",
+      "type": "Bolt",
+      "sources": [
+        "Twitter"
+      ]
+    },
+    {
+      "id": "Counter",
+      "type": "Bolt",
+      "sources": [
+        "Lucene",
+        "Facebook"
+      ]
+    },
+    {
+      "id": "MySQL",
+      "type": "Bolt",
+      "sources": [
+        "Counter"
+      ]
+    }
+  ],
+  "layout": {
+    "components": {
+      "MySQL": {
+        "x": 1047,
+        "y": 41,
+        "w": 250,
+        "h": 100,
+        "dashletLayout": []
+      },
+      "Lucene": {
+        "x": 413,
+        "y": 29,
+        "w": 250,
+        "h": 205,
+        "dashletLayout": [
+          {
+            "aspect": "Accuracy",
+            "name": "Accuracy",
+            "type": "truesPercentage",
+            "widget": "BarChart",
+            "visible": false
+          },
+          {
+            "aspect": "Events",
+            "name": "Events",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": true
+          },
+          {
+            "aspect": "Hours",
+            "name": "Hours",
+            "type": "timeMean",
+            "widget": "NumberLabel",
+            "visible": true
+          },
+          {
+            "aspect": "IO",
+            "name": "IO",
+            "type": "counts",
+            "widget": "TimeLabel",
+            "visible": true
+          },
+          {
+            "aspect": "Long",
+            "name": "Long",
+            "type": "numberMean",
+            "widget": "NumberLabel",
+            "visible": true
+          },
+          {
+            "aspect": "Precision",
+            "name": "Precision",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": false
+          },
+          {
+            "aspect": "Seconds",
+            "name": "Seconds",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": false
+          }
+        ]
+      },
+      "Counter": {
+        "x": 708,
+        "y": 277,
+        "w": 250,
+        "h": 162,
+        "dashletLayout": [
+          {
+            "aspect": "Accuracy",
+            "name": "Accuracy",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": true
+          },
+          {
+            "aspect": "Events",
+            "name": "Events",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": true
+          },
+          {
+            "aspect": "Hours",
+            "name": "Hours",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": false
+          },
+          {
+            "aspect": "IO",
+            "name": "IO",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": false
+          },
+          {
+            "aspect": "Long",
+            "name": "Long",
+            "type": "numberMean",
+            "widget": "NumberLabel",
+            "visible": false
+          },
+          {
+            "aspect": "Precision",
+            "name": "Precision",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": false
+          },
+          {
+            "aspect": "Seconds",
+            "name": "Seconds",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": true
+          }
+        ]
+      },
+      "Facebook": {
+        "x": 104,
+        "y": 346,
+        "w": 250,
+        "h": 124,
+        "dashletLayout": [
+          {
+            "aspect": "Accuracy",
+            "name": "Accuracy",
+            "type": "truesPercentage",
+            "widget": "BarChart",
+            "visible": true
+          },
+          {
+            "aspect": "Events",
+            "name": "Events",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": false
+          },
+          {
+            "aspect": "Hours",
+            "name": "Hours",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": false
+          },
+          {
+            "aspect": "IO",
+            "name": "IO",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": false
+          },
+          {
+            "aspect": "Long",
+            "name": "Long",
+            "type": "numberMean",
+            "widget": "NumberLabel",
+            "visible": false
+          },
+          {
+            "aspect": "Precision",
+            "name": "Precision",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": false
+          },
+          {
+            "aspect": "Seconds",
+            "name": "Seconds",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": true
+          }
+        ]
+      },
+      "Twitter": {
+        "x": 28,
+        "y": 32,
+        "w": 250,
+        "h": 164,
+        "dashletLayout": [
+          {
+            "aspect": "Accuracy",
+            "name": "Accuracy",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": true
+          },
+          {
+            "aspect": "Events",
+            "name": "Events",
+            "type": "counts",
+            "widget": "TimeLabel",
+            "visible": true
+          },
+          {
+            "aspect": "Hours",
+            "name": "Hours",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": false
+          },
+          {
+            "aspect": "IO",
+            "name": "IO",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": false
+          },
+          {
+            "aspect": "Long",
+            "name": "Long",
+            "type": "numberMean",
+            "widget": "NumberLabel",
+            "visible": false
+          },
+          {
+            "aspect": "Precision",
+            "name": "Precision",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": true
+          },
+          {
+            "aspect": "Seconds",
+            "name": "Seconds",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": false
+          }
+        ]
+      }
+    }
+  },
+  "events": 0
+}

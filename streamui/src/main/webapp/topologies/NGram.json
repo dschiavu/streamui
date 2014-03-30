@@ -1,0 +1,86 @@
+{
+  "id": "NGram",
+  "type": "Storm",
+  "components": [
+    {
+      "id": "DMSInput",
+      "type": "Spout"
+    },
+    {
+      "id": "DMSInput2",
+      "type": "Spout",
+      "sources": [
+        "DMSInput"
+      ]
+    }
+  ],
+  "layout": {
+    "components": {
+      "DMSInput2": {
+        "x": 577,
+        "y": 15,
+        "w": 250,
+        "h": 262,
+        "dashletLayout": [
+          {
+            "aspect": "Accuracy",
+            "name": "Accuracy",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": true
+          },
+          {
+            "aspect": "Events",
+            "name": "Events",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": true
+          },
+          {
+            "aspect": "Hours",
+            "name": "Hours",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": false
+          },
+          {
+            "aspect": "IO",
+            "name": "IO",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": false
+          },
+          {
+            "aspect": "Long",
+            "name": "Long",
+            "type": "numberMean",
+            "widget": "NumberLabel",
+            "visible": true
+          },
+          {
+            "aspect": "Precision",
+            "name": "Precision",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": true
+          },
+          {
+            "aspect": "Seconds",
+            "name": "Seconds",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": true
+          }
+        ]
+      },
+      "DMSInput": {
+        "x": 10,
+        "y": 10,
+        "w": 250,
+        "h": 100,
+        "dashletLayout": []
+      }
+    }
+  },
+  "events": 0
+}

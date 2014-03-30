@@ -1,0 +1,347 @@
+
+/****************************************************
+ * DragNDrop
+ ****************************************************/
+ 
+.VommondContentContainer{
+	height: 100%;
+	width: 100%;
+}
+
+
+.VommondDnDStart{
+	opacity : 0.7;
+}
+
+.VommondDnDMove{
+	cursor: move;
+	opacity : 0.4;
+}
+
+/****************************************************
+ * Dialog
+ ****************************************************/
+
+.VommondDialogBackground{
+	position: fixed;
+	width: 100%;
+	height:100%;
+	z-index:10000;
+	top:0px;
+	left:0px;
+	
+	
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.53) 0%, rgba(0,0,0,0.85) 72%, rgba(0,0,0,0.85) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.53)), color-stop(72%,rgba(0,0,0,0.85)), color-stop(100%,rgba(0,0,0,0.85))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.53) 0%,rgba(0,0,0,0.85) 72%,rgba(0,0,0,0.85) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.53) 0%,rgba(0,0,0,0.85) 72%,rgba(0,0,0,0.85) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.53) 0%,rgba(0,0,0,0.85) 72%,rgba(0,0,0,0.85) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(0,0,0,0.53) 0%,rgba(0,0,0,0.85) 72%,rgba(0,0,0,0.85) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87000000', endColorstr='#d9000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		
+}
+
+/****************************************************
+ * Dashlet
+ ****************************************************/
+ 
+ .VommondDashlet{
+	overflow: hidden;
+ }
+
+.VommondDashletContent{
+	width: 100%;
+	height:100%;
+	padding: 0px 0px 20px;
+}
+
+
+.VommondDashletItem{
+	padding: 5px 10px;
+	transition-duration: 0.5s;
+	transition-margin;
+	position: relative;
+	width:240px;
+}
+
+.VommondDashletItemWidget{
+	height:30px;
+	transition-duration: 0.5s;
+	transition-property:opacity;
+}
+
+
+.VommondDashletLabel{
+	font-size: 0.9em;
+	display: inline-block;
+	margin-right: 5px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 60px
+}
+
+.VommondDashletBar{
+	background: rgb(165,206,0); /* Old browsers */
+}
+
+.VommondDashletWidgetContainer{
+	width:150px;
+	display: inline-block;
+}
+
+.VommondDashletLabelValue{
+	color: rgb(165,206,0);
+	font-size: 1em;
+}
+
+/****************************************************
+ * General Layout
+ ****************************************************/
+ 
+.VommondDashletContainer{
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+
+.VommondDashletButtonBar{
+	overflow:hidden;
+	width: 100%;
+	transition-duration: 0.5s;
+	transition-property:height;
+	text-align: right;
+	height: 0px;
+
+}
+
+.VommondDashletButton{
+	display: inline-block;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin-left:10px;
+	border-radius:3px;
+	color:#cecece;		
+}
+
+.VommondDashletButton:HOVER{
+	color:white;	
+}
+
+.VommondDashletItemConfig{
+	position: absolute;
+	top:5px;
+	right:-40px;
+	height:20px;
+	width:40px;
+	opacity:0;
+	transition-duration: 0.5s;
+	transition-property:opacity;
+}
+
+.VommondDashletItemConfig span{
+	margin-right:5px;
+	height:20px;
+	width:15px;
+	cursor: pointer;
+}
+
+
+
+.VommondDashletContentContainer{
+	position: relative;
+	left:0px;
+	transition-duration: 0.5s;
+	transition-property:left;
+}
+
+.VommondDashletTypeContainer{
+	position: absolute;
+	top:0px;
+	display:none;
+	transition-duration: 0.5s;
+	transition-property:right;
+}
+
+
+/****************************************************
+ * Type Config - Slide Content awaz
+ ****************************************************/
+
+.VommondDashletType .VommondDashletTypeContainer{
+	height:100%;
+	width:100%;
+}
+
+.VommondDashletTypeLabel{
+	 padding: 10px;
+	 border-top:1px solid #777;
+}
+
+
+
+/****************************************************
+ * View Modus -  Config is hidden
+ ****************************************************/
+ 
+.VommondDashletItemHidden .VommondDashletItemWidget{
+	height: 0px;
+	overflow: hidden;
+	 opacity : 0.2;
+}
+
+.VommondDashletItem.VommondDashletItemHidden{
+	padding: 0px 10px;
+	
+}
+
+
+
+	
+/****************************************************
+ *  Config - Modus. Show buttonbar and hidden widhets
+ *  				and config buttons
+ ****************************************************/
+ 
+ 
+.VommondDashletConfig .VommondDashletTypeContainer{
+ 	display: block;
+}
+
+.VommondDashletConfig .VommondDashletContentContainer{
+  	 minHeight :150px;
+}
+ 
+ .VommondDashletConfig .VommondDashletItemHidden .VommondDashletItemWidget{
+ 	height:30px;
+ 	opacity : 0.2;
+}
+
+ .VommondDashletConfig .VommondDashletItemHidden.VommondDashletItem{
+ 	padding: 5px 10px;
+ }
+ 
+
+
+.VommondDashletConfig  .VommondDashletButtonBar{
+	height: 35px;
+	border-top:1px solid #777;
+	
+}
+
+ 
+.VommondDashletConfig .VommondDashletItem{
+	margin-right: 45px;
+}
+
+.VommondDashletConfig .VommondDashletItemConfig{
+	opacity:1;
+}
+
+
+/****************************************************
+ * PercentageBar
+ ****************************************************/
+.VommondPercentageBar{
+	
+}
+.VommondPercentageBarLabel{
+	
+	display: inline-block;
+	width: 60px;
+	overflow:hidden;
+	margin-right: 5px;
+	vertical-align:middle;
+}
+
+.VommondPercentageBarContainer{
+	display: inline-block;
+}
+
+
+.VommondPercentageBarLine{
+	display:inline-block;
+	height: 5px;
+	min-width: 1px;
+	vertical-align:middle;
+	border-radius:3px;
+	transition-duration: 0.5s;
+	transition-property: width;
+}
+
+
+/****************************************************
+ * BarChart
+ ****************************************************/
+
+.VommondBarChart{
+	width:100%;
+
+}
+
+
+.VommondBarChartLabel{
+	display: inline-block;
+	width: 60px;
+	overflow:hidden;
+	margin-right: 5px;
+	vertical-align:middle;
+}
+
+.VommondBarChartContainer{
+	height:20px;
+	width:150px;
+	display: inline-block;
+	position: relative;
+	vertical-align:middle;
+}
+
+.VommondBarChartLine{
+	position: absolute;
+	bottom: 0px;
+	min-height: 1px;	
+}
+
+/****************************************************
+ * Type Config
+ ****************************************************/
+.VommondDashletTypeConfig .VommondDashletLabel{
+	margin-left:10px;
+	width:100px;
+	
+}
+
+/****************************************************
+ * CheckBox
+ ****************************************************/
+ 
+ 
+ .VommondCheckBox{
+ 	display: inline-block;
+ 	width:16px;
+ 	height:16px;
+ 	border:1px solid #777;
+ 	vertical-align: middle;
+ }
+ 
+ .VommondCheckBoxHook{
+ 	opacity:0;
+ 	transition-duration: 0.3s;
+	transition-property: opacity;
+	display: inline-block;
+ 	width:6px;
+ 	height:10px;
+ 	border-bottom: 3px solid #A5CE00;
+	border-right: 2px solid #A5CE00;
+	margin-left:4px;
+	margin-bottom:4px;
+ }
+ 
+  .VommondCheckBoxChecked .VommondCheckBoxHook{
+  	opacity:1;
+  	transform:rotate(45deg);
+	-ms-transform:rotate(45deg); /* IE 9 */
+	-webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
+	
+ }

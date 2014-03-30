@@ -1,0 +1,277 @@
+{
+  "id": "Trident",
+  "type": "Storm",
+  "components": [
+    {
+      "id": "DMSInput",
+      "type": "Spout"
+    },
+    {
+      "id": "DMSInput2",
+      "type": "Spout"
+    },
+    {
+      "id": "UserProfileStore",
+      "type": "Bolt",
+      "sources": [
+        "DMSOUtputBolt"
+      ]
+    },
+    {
+      "id": "RecommenderBolt",
+      "type": "Bolt",
+      "sources": [
+        "DMSInput",
+        "DMSInput2"
+      ]
+    },
+    {
+      "id": "DMSOUtputBolt",
+      "type": "Bolt",
+      "sources": [
+        "RecommenderBolt",
+        "DMSInput2"
+      ]
+    }
+  ],
+  "layout": {
+    "components": {
+      "RecommenderBolt": {
+        "x": 398,
+        "y": 20,
+        "w": 250,
+        "h": 124,
+        "dashletLayout": [
+          {
+            "aspect": "Accuracy",
+            "name": "Accuracy",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": true
+          },
+          {
+            "aspect": "Events",
+            "name": "Events",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": false
+          },
+          {
+            "aspect": "Hours",
+            "name": "Hours",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": false
+          },
+          {
+            "aspect": "IO",
+            "name": "IO",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": false
+          },
+          {
+            "aspect": "Long",
+            "name": "Long",
+            "type": "numberMean",
+            "widget": "NumberLabel",
+            "visible": false
+          },
+          {
+            "aspect": "Precision",
+            "name": "Precision",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": false
+          },
+          {
+            "aspect": "Seconds",
+            "name": "Seconds",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": true
+          }
+        ]
+      },
+      "DMSOUtputBolt": {
+        "x": 728,
+        "y": 116,
+        "w": 250,
+        "h": 302,
+        "dashletLayout": [
+          {
+            "aspect": "Accuracy",
+            "name": "Accuracy",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": true
+          },
+          {
+            "aspect": "Events",
+            "name": "Events",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": true
+          },
+          {
+            "aspect": "Hours",
+            "name": "Hours",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": true
+          },
+          {
+            "aspect": "IO",
+            "name": "IO",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": false
+          },
+          {
+            "aspect": "Long",
+            "name": "Long",
+            "type": "numberMean",
+            "widget": "NumberLabel",
+            "visible": true
+          },
+          {
+            "aspect": "Precision",
+            "name": "Precision",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": true
+          },
+          {
+            "aspect": "Seconds",
+            "name": "Seconds",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": true
+          }
+        ]
+      },
+      "DMSInput2": {
+        "x": 34,
+        "y": 247,
+        "w": 250,
+        "h": 182,
+        "dashletLayout": [
+          {
+            "aspect": "Accuracy",
+            "name": "Accuracy",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": false
+          },
+          {
+            "aspect": "Events",
+            "name": "Events",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": true
+          },
+          {
+            "aspect": "Hours",
+            "name": "Hours",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": false
+          },
+          {
+            "aspect": "IO",
+            "name": "IO",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": true
+          },
+          {
+            "aspect": "Long",
+            "name": "Long",
+            "type": "numberMean",
+            "widget": "NumberLabel",
+            "visible": false
+          },
+          {
+            "aspect": "Precision",
+            "name": "Precision",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": false
+          },
+          {
+            "aspect": "Seconds",
+            "name": "Seconds",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": true
+          }
+        ]
+      },
+      "UserProfileStore": {
+        "x": 1365,
+        "y": 63,
+        "w": 250,
+        "h": 100,
+        "dashletLayout": []
+      },
+      "DMSInput": {
+        "x": 10,
+        "y": 10,
+        "w": 250,
+        "h": 142,
+        "dashletLayout": [
+          {
+            "aspect": "Accuracy",
+            "name": "Accuracy",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": true
+          },
+          {
+            "aspect": "Events",
+            "name": "Events",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": false
+          },
+          {
+            "aspect": "Hours",
+            "name": "Hours",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": true
+          },
+          {
+            "aspect": "IO",
+            "name": "IO",
+            "type": "counts",
+            "widget": "BarChart",
+            "visible": false
+          },
+          {
+            "aspect": "Long",
+            "name": "Long",
+            "type": "numberMean",
+            "widget": "NumberLabel",
+            "visible": false
+          },
+          {
+            "aspect": "Precision",
+            "name": "Precision",
+            "type": "truesPercentage",
+            "widget": "PercentageBar",
+            "visible": false
+          },
+          {
+            "aspect": "Seconds",
+            "name": "Seconds",
+            "type": "timeMean",
+            "widget": "TimeLabel",
+            "visible": false
+          }
+        ]
+      }
+    }
+  },
+  "events": 0
+}

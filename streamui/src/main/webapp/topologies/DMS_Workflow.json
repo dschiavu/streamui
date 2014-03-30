@@ -1,0 +1,77 @@
+{
+  "id": "DMS_Workflow",
+  "type": "Storm",
+  "components": [
+    {
+      "id": "DMSInput",
+      "type": "Spout"
+    },
+    {
+      "id": "DMSInput2",
+      "type": "Spout"
+    },
+    {
+      "id": "UserProfileStore",
+      "type": "Bolt",
+      "sources": [
+        "DMSOUtputBolt"
+      ]
+    },
+    {
+      "id": "RecommenderBolt",
+      "type": "Bolt",
+      "sources": [
+        "DMSInput",
+        "DMSInput2"
+      ]
+    },
+    {
+      "id": "DMSOUtputBolt",
+      "type": "Bolt",
+      "sources": [
+        "RecommenderBolt",
+        "DMSInput2"
+      ]
+    }
+  ],
+  "layout": {
+    "components": {
+      "RecommenderBolt": {
+        "x": 479,
+        "y": 10,
+        "w": 250,
+        "h": 100,
+        "dashletLayout": []
+      },
+      "DMSOUtputBolt": {
+        "x": 799,
+        "y": 132,
+        "w": 250,
+        "h": 100,
+        "dashletLayout": []
+      },
+      "DMSInput2": {
+        "x": 123,
+        "y": 243,
+        "w": 250,
+        "h": 100,
+        "dashletLayout": []
+      },
+      "UserProfileStore": {
+        "x": 1060,
+        "y": 10,
+        "w": 250,
+        "h": 100,
+        "dashletLayout": []
+      },
+      "DMSInput": {
+        "x": 10,
+        "y": 10,
+        "w": 250,
+        "h": 100,
+        "dashletLayout": []
+      }
+    }
+  },
+  "events": 0
+}

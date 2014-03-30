@@ -1,0 +1,45 @@
+02-19 22:45:53 database: close
+org.h2.message.DbException: General error: "java.lang.NoClassDefFoundError: org/h2/index/PageBtreeCursor"; SQL statement:
+SELECT ID FROM INFORMATION_SCHEMA.LOBS WHERE TABLE = ? [50000-175]
+	at org.h2.message.DbException.convert(DbException.java:272)
+	at org.h2.store.LobStorageBackend.removeAllForTable(LobStorageBackend.java:211)
+	at org.h2.engine.Database.close(Database.java:1168)
+	at org.h2.engine.DatabaseCloser.run(DatabaseCloser.java:64)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.NoClassDefFoundError: org/h2/index/PageBtreeCursor"; SQL statement:
+SELECT ID FROM INFORMATION_SCHEMA.LOBS WHERE TABLE = ? [50000-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:161)
+	at org.h2.message.DbException.convert(DbException.java:280)
+	at org.h2.command.Command.executeQuery(Command.java:208)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:106)
+	at org.h2.store.LobStorageBackend.removeAllForTable(LobStorageBackend.java:205)
+	... 2 more
+Caused by: java.lang.NoClassDefFoundError: org/h2/index/PageBtreeCursor
+	at org.h2.index.PageBtreeIndex.find(PageBtreeIndex.java:180)
+	at org.h2.index.PageBtreeIndex.find(PageBtreeIndex.java:172)
+	at org.h2.index.BaseIndex.find(BaseIndex.java:126)
+	at org.h2.index.IndexCursor.find(IndexCursor.java:159)
+	at org.h2.table.TableFilter.next(TableFilter.java:328)
+	at org.h2.command.dml.Select.queryFlat(Select.java:527)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:632)
+	at org.h2.command.dml.Query.query(Query.java:314)
+	at org.h2.command.dml.Query.query(Query.java:284)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:196)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.h2.index.PageBtreeCursor
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1701)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1546)
+	... 16 more
+02-19 22:45:53 database: close
+java.lang.NoClassDefFoundError: org/h2/store/PageStreamTrunk$Iterator
+	at org.h2.store.PageLog.free(PageLog.java:207)
+	at org.h2.store.PageStore.compact(PageStore.java:491)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1257)
+	at org.h2.engine.Database.close(Database.java:1207)
+	at org.h2.engine.DatabaseCloser.run(DatabaseCloser.java:64)
+Caused by: java.lang.ClassNotFoundException: org.h2.store.PageStreamTrunk$Iterator
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1701)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1546)
+	... 5 more

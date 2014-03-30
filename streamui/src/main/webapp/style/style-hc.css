@@ -1,0 +1,202 @@
+
+html{
+  height: 100%;
+  background: #f6f6f6; 
+}
+
+
+body{
+	width: 100%;
+	min-height: 100%;
+	
+	background:#8C8C8C;				
+
+}
+
+.StormUI{
+	width:100%;
+	height:100%;
+
+}
+
+.StormUIContainer{
+	width:100%;
+	height:100%;
+}
+
+
+ 
+.StormUIButton{
+	background: rgb(36,219,0); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(36,219,0,1) 0%, rgba(53,188,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(36,219,0,1)), color-stop(100%,rgba(53,188,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(36,219,0,1) 0%,rgba(53,188,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(36,219,0,1) 0%,rgba(53,188,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(36,219,0,1) 0%,rgba(53,188,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(36,219,0,1) 0%,rgba(53,188,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24db00', endColorstr='#35bc00',GradientType=0 ); /* IE6-9 */
+		
+	padding: 5px;
+	cursor: pointer;
+	
+	border-radius:3px;
+	margin: 3px;	
+	
+	color: #eee;
+ }
+ 
+.StormUIButton:HOVER {
+	color:#fff;
+	text-decoration: none;
+}
+
+.StormUIButton.Passive{
+	background:#ccc;	
+	padding: 5px;
+	cursor: pointer;
+	
+	border-radius:3px;
+	margin: 3px;	
+	
+	color: #eee;
+ }
+ 
+ 
+
+.StromUIContainer{
+	height: 100%;
+	width: 100%;
+}
+
+.VommondContentContainer{
+	height: 100%;
+	width: 100%;
+}
+
+
+
+/****************************************************
+ * Toplogy
+ ****************************************************/
+
+
+
+.StormUITopology{
+	width:1200px;
+	height:800px;
+	//background: #FFF;
+	//margin: 20px;
+	//			height: 100%;
+	width: 100%;
+}
+
+
+.StormUITopologyCanvas{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	padding: 10px;
+}
+
+.StormUITopologySVG{
+	position: absolute;
+	z-index: 1000;
+}
+	
+.StormUITopologyBoxes{
+	position: absolute;
+	z-index: 1001;
+}
+	
+.StormUITopologyBox{
+	position: absolute;
+	z-index: 1002;
+	
+	background:#8C8C8C;
+	border-radius:3px;
+	border:2px solid #febf04;
+	background-color:#555;
+	
+	
+	padding:10px;
+	
+	//box-shadow: 0px 0px 5px #000;
+	transition-duration: 0.6s;
+	transition-property:background;
+	
+	color:#febf04;
+}	
+
+
+
+.StormUITopologySpout{
+	
+}
+
+.StormUITopologyBolt{
+}
+
+/**
+ * Menu
+ */
+
+.StormUITopologyConfig{
+	z-index:1005;
+ 	position: absolute;
+	left:0px;
+	right: 0px;
+
+	height: 30px;
+	width: 30px;
+	
+	padding: 5px;
+	color:#FFF;
+	font-size: 14px;
+	
+	
+	cursor: pointer;
+	
+	
+	transition: 0.3s;
+	-webkit-transition: 0.3s; /* Safari */
+	border-bottom-right-radius: 5px;
+	
+	overflow: hidden;
+	background:#000;
+	opacity:0.8;
+	
+	box-shadow: 0px 0px 10px #000;
+}
+
+
+.StormUITopologyConfig:HOVER{
+	height: 200px;
+	width: 100px;
+}
+
+.StormUITopologyConfigHeader{
+	width: 100px;
+	height:40px;
+}
+
+.StormUITopologyConfigHeader h3{
+	display:inline-block;
+	margin:0px;
+	margin-left: 15px;
+	font-size: 14px;
+	color:#fff;
+}
+
+
+
+.StormUITopologyConfigBody{
+	height: 180px;
+	width: 100px;
+}
+
+
+.VommondDragged{
+	cursor: move;
+	opacity : 0.4;
+	border-style: dashed;
+}

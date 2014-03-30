@@ -1,0 +1,54 @@
+
+
+
+/****************************************************
+ * Toplogy
+ ****************************************************/
+body{
+	background: rgb(242,242,242); /* Old browsers */
+	transition-duration: 0.2s;
+	transition-property: background;
+}
+
+body.StreamUITopologyView{
+	background: rgb(69,72,77); /* Old browsers */
+		
+}
+
+.StreamUIToplogyListItemContainer{
+	border: 1px solid #E8E8E8;
+	border-bottom: 2px solid #CECECE;
+}
+
+.StreamUIToplogyListTopologyWrapper{
+	background: rgb(69,72,77); /* Old browsers */
+		
+}
+.StormUITopologyBox{
+	background: #222;
+	color:#fff;
+	border:none;
+	border-bottom: 2px solid #000;
+}
+
+
+.VommondDashletButtonBar{
+	background: none;
+}
+
+.VommondDashletConfig .VommondDashletButtonBar {
+	border-top:1px solid #777;
+}
+
+.VommondDashletButton{
+	color:#cecece;		
+}
+
+.VommondDashletButton:HOVER{
+	color:white;	
+}
+
+
+
+
+

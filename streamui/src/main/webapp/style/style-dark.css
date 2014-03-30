@@ -1,0 +1,83 @@
+
+
+body{
+	width: 100%;
+	min-height: 100%;
+	
+		
+
+
+background: rgb(69,72,77); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%, rgba(56,56,56,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(56,56,56,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%,rgba(56,56,56,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%,rgba(56,56,56,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%,rgba(56,56,56,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(69,72,77,1) 0%,rgba(56,56,56,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#383838',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+}
+
+ 
+ 
+
+/****************************************************
+ * Toplogy
+ ****************************************************/
+
+
+.StormUITopologyBox{
+	
+	color:white;
+	
+	
+	background: rgb(175,175,175); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(175,175,175,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(175,175,175,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(175,175,175,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(175,175,175,1) 0%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(175,175,175,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(175,175,175,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+
+	box-shadow:#333 0px 0px 3px;
+}	
+
+
+.StormUITopologyBoxHeader{
+	background: rgb(165,165,165); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(165,165,165,1) 0%, rgba(117,117,117,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(165,165,165,1)), color-stop(100%,rgba(117,117,117,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(165,165,165,1) 0%,rgba(117,117,117,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(165,165,165,1) 0%,rgba(117,117,117,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(165,165,165,1) 0%,rgba(117,117,117,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(165,165,165,1) 0%,rgba(117,117,117,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5a5a5', endColorstr='#757575',GradientType=0 ); /* IE6-9 */
+
+	border-radius :3px 3px 0px 0px;
+	
+	border-bottom: 1px solid #555;
+	text-shadow: #555 1px 1px;
+}
+
+
+
+.StormUITopologyBoxContent{
+	border-top:1px solid #cecece;
+	text-shadow: #555 1px 1px;
+}
+
+
+
+.VommondDashletBar{
+	background: rgb(73,192,240); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(73,192,240,1) 0%, rgba(44,175,227,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(73,192,240,1)), color-stop(100%,rgba(44,175,227,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(73,192,240,1) 0%,rgba(44,175,227,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(73,192,240,1) 0%,rgba(44,175,227,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(73,192,240,1) 0%,rgba(44,175,227,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(73,192,240,1) 0%,rgba(44,175,227,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49c0f0', endColorstr='#2cafe3',GradientType=0 ); /* IE6-9 */
+		
+}
